@@ -76,39 +76,18 @@ ___
 
 > Note: This in no way is a replacement for adjusting your config.g parameters and/or tuning the hardware to the best of your capability. It's only a final resort to overcome backlash.
 
-<ol>
-    <li><b>Fusion 360 Post Processor</b>
-      <p>
-        <b>How does it work?</b>
-        <br>Direction change backlash occurs when the machine mechanically falls short in moving the head to the requeted amount as the direction of the motion changes, but it carries on moving the head correctly for the next move if it happens to be in the same direction. For example if the machine is moving towards Y+ (or holding right after a  move towards Y+) and the nnext command is to move towards the Y- for 5mm, the machine may only move 4.5mm towards Y- instead, but reports 5mm motion to the controller. So, both the controller and Fusion have no idea that there is a 0.5mm shortage of motion and therefore some slight deformity in the output object/cut. This is particulary problematic in repeated back and forth motions.
-        <br>The software can overcome this shortage by boosting these specific moves to the right amount so the head actually moves to the right amount. This will happen by fooling the controller that the requested stop point after a direction change is slightly larger to the specific amount but it keeps Fusion360 to still think it has moved to the desired amount. These adjustments should happen in correct occassions and only when really needed.
-      </p>
-      <p><b>Compensated Tools Motion Box</b>
-        <br>If measured accurately, boosting moves to compensate for the backlash should not impact the shape or dimension of the resulting model. After all, what it should do is to render an even more accurate model. The boosts however will force the controller to feed the motors a few extra steps that in effect will slightly change the readings on the compensated axis without Fusion 360 knowing. If the changes were reported to Fusion 360 it will try to readjust the move back, that change of direction will trigger the compensator again and if Fusion 360 kicks in again to readjust the result will be ann unndesired vibration.
-        <br>What happens after all is that, while the actual moves don't affect the dimension of the cuts, we end up having an slightly enlarged 'reported' tool motion box. This post will print the readjusted tool 'theorical' or 'reported' to controller motion box as comments at the end of the G-Code program it generates. It's always a good idea to take a look at the adjusted motion box report to make sure the machine will not run out of range of its allowable movements in any compensated axis, and if so the stock should be replaced to avoid that.
-        </p>
-        <p><b>How to measure the backlash for this post-Processor</b>
-        <br>Jog an axis to one direction and jog it back 10mm and measure how far short of 10mm the axis has come back. Repeat the same for 1mm and note the offset amounts. We need the offset for both 1mm and 10mm motion after change of direction.
-        </p>
-      </li>
-      </ul>
-
-
-</ol>
 
 **ENJOY**
+
 Thats all Folks. Hope this can help you in some way.
+
 ... Consider Supporting Us Down Below. 
 
 ---
 
-<br/>
-
 SUPPORT US ► 
 - Consider Subscribing: https://bit.ly/2DgZyuq
 - Patreon ➔ https://www.patreon.com/JenkinsRobotics
-
-<br/>
 
 FOLLOW US ►
 - Discord ➔ https://discord.gg/sAnE5pRVyT
