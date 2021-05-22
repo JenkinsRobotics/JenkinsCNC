@@ -1,21 +1,6 @@
 <h2>Jenkins Robotics</h2>
 <h1>Project Files for Shapeoko 3 XXL  Duet3 RepRap CNC </h1>
 
-<h2 style="color: gold;">Includes CAD models, system files, macro files, diagrams, fusion 360 post processor w/ support for multi-tool, and more</h2>
-
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLNTKXZ4hgP_jekZOWw05JcJtyseCdSsIV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
-![image alt text](http://img.youtube.com/vi/w-qWbZ5-IQw/0.jpg)
-[link text](https://youtube.com/playlist?list=PLNTKXZ4hgP_jekZOWw05JcJtyseCdSsIV "link title")
-
-Updates:
-- 4/29/2020: Initial release 
-  - Improved: Fusion 360 post processor / Tool Changer macros
-  - To Be Added: DUST SHOE & upgraded spindle adaptor plate
-
-<br/>
 <b>Welcome</b>
 <br>
 This is the project files for our Shapeoko 3 xxl. Our Shapeoko has been upgraded with multiple new addons including: </br>
@@ -27,6 +12,18 @@ This is the project files for our Shapeoko 3 xxl. Our Shapeoko has been upgraded
 - Work Piece XYZ Probe
 - Custum Fusion 360 Post Processor
 
+
+
+![image alt text](http://img.youtube.com/vi/w-qWbZ5-IQw/0.jpg)
+[link text](https://youtube.com/playlist?list=PLNTKXZ4hgP_jekZOWw05JcJtyseCdSsIV "Watch Now")
+
+Updates:
+- 4/29/2020: Initial release 
+  - Improved: Fusion 360 post processor / Tool Changer macros
+- To Be Added: 
+  - DUST SHOE & upgraded spindle adaptor plate
+
+<br/>
 <br> The following is a breakdown of the different folders and the files contained in them: </br>
 
 <ol>
@@ -60,6 +57,7 @@ This is the project files for our Shapeoko 3 xxl. Our Shapeoko has been upgraded
         <p> </p>
       </li>
     </ul>
+
  <li><b>CODE</b>
    <ul>
      <li><i>Home axis on tool change</i>
@@ -107,6 +105,7 @@ This is the project files for our Shapeoko 3 xxl. Our Shapeoko has been upgraded
       <p> </p>
     </li>
   </ul>
+  
   <li><b>Diagrams</b>
     <ul>
       <li><i>Z-Probe thickness</i>
@@ -145,29 +144,6 @@ This is the project files for our Shapeoko 3 xxl. Our Shapeoko has been upgraded
         <br>Jog an axis to one direction and jog it back 10mm and measure how far short of 10mm the axis has come back. Repeat the same for 1mm and note the offset amounts. We need the offset for both 1mm and 10mm motion after change of direction.
         </p>
         <p> </p>
-      <ul>
-        <li><i>Apply Backlash Compensation</i>
-          <br>If unticked the linear backlash compensation will not be caculated or applied.
-        </li>
-        <li><i>Flush Accumulated Compensation Error</i>
-          <br>When checked, it resets the tool position to WCS home before each operation and starts with a clean slate for that operation. This in effect reduces the risk of errors or offsets accumulations which could be a result of hundereds of back and forth motions in preforming every operation
-        </li>
-        <li><i>Flush Accumulated Compensation on Interval</i>
-          <br>When checked, it preforms the flushing routine (as above) on specific intervals of:
-          <ul>
-            <li>None</li>
-            <li>Every 500 moves</li>
-            <li>Every 1000 moves</li>
-          </ul>
-        </li>
-        <li><i>X Axis measured backlash for 10mm</i></li>
-        <li><i>X Axis measured backlash for 1mm</i></li>
-        <li><i>Y Axis measured backlash for 10mm</i></li>
-        <li><i>Y Axis measured backlash for 1mm</i></li>
-        <li><i>Z Axis measured backlash for 10mm</i></li>
-        <li><i>Z Axis measured backlash for 1mm</i>
-          <br>Input 2 measured backlash on each axis (the offset for 1mm motion on direction change and for 10mm motion on each axis. Input 0 if there is no backlash on the axis. The numbers should represent how far each mentioned axis is short from the desired amount of motion as described above.
-          <br>
           <br><b>Note: </b>This in no way is a replacement for adjusting your config.g parameters and/or tuning the hardware to the best of your capability. It's only a final resort to overcome backlash.
       </li>
       </ul>
