@@ -1,0 +1,3 @@
+;Switch to WCS1
+G54 ;set working coordinate system to WCS1
+M291 P"Switched to WCS #1" S1    ; screen message

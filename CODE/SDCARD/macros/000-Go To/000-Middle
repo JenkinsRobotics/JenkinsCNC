@@ -1,0 +1,3 @@
+;MOVE TO MIDDLE OF WORKSPACE
+G28 Z							; Home Z
+G53 G1 X-400 Y-385 F4000		; Using Machine Coordinates Moved To Specified Location  

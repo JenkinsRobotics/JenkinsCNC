@@ -1,0 +1,2 @@
+M552 S0                             ; turn off WIFI / Ethernet
+M552 S1 P192.168.86.64              ; turn ON ETHERNET and set IP Adress to 192.168.86.64

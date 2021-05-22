@@ -1,0 +1,5 @@
+;MOVE TO WCS#1 ORGIN (USE AS THE ORGIN OF JOB)
+G28 Z                    	; Home Z  
+G54                       	; Switch to WCS #1
+G1 X0 Y0 F3000            	; go to X=0, Y=0
+G1 Z6 F1500					; GO TO Z6

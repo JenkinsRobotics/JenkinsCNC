@@ -1,0 +1,2 @@
+;Turn On DUST COLLECTOR
+M106 P2 S255          ; turn off fan# 2 (DUSTCOLLECTOR) (RANGE : 0 to 255 or 0.0 to 1.0) 

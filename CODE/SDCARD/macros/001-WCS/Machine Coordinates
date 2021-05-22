@@ -1,0 +1,3 @@
+;Switch to Machine Coordinates
+G53 												; Set Machine Coordinate System
+M291 P"Switched to Machine Coordinates" S1    		; screen message

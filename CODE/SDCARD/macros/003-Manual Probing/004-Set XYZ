@@ -1,0 +1,6 @@
+;Zero WCS #1  X,Y,Z Axis
+G10 P1 L20 X0 Y0 Z0   ; Sets new zero on WCS #1
+G54                   ; switches to WCS #1
+M500                ; save on memory
+G1 Z10          ; lift Z by 10 mm
+M291 P"WCS #1 Zeroed" S1    ; screen message
