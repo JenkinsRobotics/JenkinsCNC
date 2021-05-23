@@ -5,8 +5,8 @@
 
 #### WELCOME
 
- This is the project files for our Shapeoko 3 xxl. Out goal is to make our shapeoko 3 as automated as possible. To that goal we have installed multiple upgrades including: 
-- [x] Duet 3 Controll Board
+ This is the project files for our Shapeoko 3 xxl. Our goal is to make our shapeoko 3 as automated as possible. To achive this goal we have installed multiple upgrades onto our cnc including: 
+- [x] Duet 3 Control Board
 - [x] Pnumatic tool changer
 - [x] Varible Fequency Drive & spindle
 - [x] Tool TCP Probe
@@ -27,30 +27,28 @@ ___
 The following is a breakdown of the different folders and the files contained in them:
 
 1. **CAD**
-   - *Audible signal when operator's attention needed*
-    Check this to get an audible notifications whenever special attention required such as when the tool is ready for change, or where the extreme caution is adviced, such as when failure to remove a probe can cause damages to the tool, part, machine or even the operator.
-    The audible signal is generated on the computer that runs the control and NOT the controller board. So, this requires your PC to be audio enabled and volume is up.
+   - *Online Models*
+    Reference CAD models were used in the modeling of the shapeoko 360. Including a generic Shapeoko 3 model and a Duet 3 Model. We are also using a generic CAD cover for the LCD screen that can be downlaoded directly from thingiverse. All reference CAD models used are copied here with any other documentation and licenses that came with the file. 
 
-   - *Corner Probe Placement*
-    Depending on your setup, you may place your corner probe on any of the four corner of your stock. This will let the program to know and therefore to adjust for your corner probe location. If you choose nnot to use corner probe at all, these parameters will be ignored.
+   - *Jenkins Robotics CAD*
+    All released CAD models will be posted here on Github. Every CAD model made by us are given a part number (JRCNC###). Original files are created using fusion 360. Most files will also be given proper engineering drawings once a release version of the file is posted.
     
     &nbsp;
 2. **CODE**  
    - *SDCARD*
-   reforms XYZ-Corner Probe on start of script. It takes the corner probe dimensions and placemennnt from the options you specify in this stage, under sectionn 3- Probes
+    This folder contains a copy of all they files located on our Duet 3 Motherboard SD Card. The system drive contains multiple subfolders each containing different gcode / system files. Before Copyping/referencing our  custom files it is best to upgrade the stock firmware and system files. The official Duet 3 releases can be found on GitHub.  [RepRap Files](https://github.com/Duet3D "Duet3D").
       
    - *Macros*
-    How many seconds does the Spindle motor need to catch up from 0 to 6000. Determines time needed for all other speeds as well. For example if catch-up time for 6000 (6K) is 15 seconds, it will be 30 seconds for 12000 and 7.5 for 3000 and so forth.
-    Get a chronometer and start your spindle motor from stationary to 6000 RPM and measure how many seconds it takes for it to catch up and settle on the RPM and input that number here.
-  
-   - *Sys Files*
-    Choose the correct Work Coordinate System that is in use from 8 available slots. The post reserves WCS 9 for manual tool change operations. For the sake of file portability, this setting will be entirely ignored if you have specified WCS in your Fusion360 setup. This ensures that you don't accidentally override the intended WCS choice if you recieved the file from an another place.
-    If you want the ability to choose your WCS in the post, you should leave the WCS offset on 0 when you setup your model for operations.
+    The Macro folder contains all the additional system files needed for the Duet 3. Files are grouped by thier function. 
+     **Directions:**
+        - Upload any of the desired files. Then review the files and make any nessiccary adjustment to the the position points and the probe/sensors numbers.  
+
+   - *Sys*
+    The System folder contains all the importanty system files needed for the Duet 3. Each file serves as important gcode files that configures the machine and provide nessicary gcode for specific processes like tool changes. 
         **Directions:**
-        - Uploading file to Fusion 360 Cloud Storage [Personal-cloud]
-        With-in Fusion 360 open the project navigation panel. Under Libraries select "Assets", then select folder "CAMPosts" (if no folder exist then create one.) Upload the custom Post Proccesor within this folder for cloud storage. 
-        - Create NC Program
-        After creating your CAD model select the "Manufacturing Tab" in Fusion 360. Complete the "Setup" process and the desired toolpaths. Create a new "NC Program".  Under "Post Configuration / Library" specify the location of the Post Processor File [personal-cloud recommended]. Under Post specify the desired file "Jenkins CNC RepRap". Adjust Post Properties if desired, then export gcode.  
+        - Upload the following files: Config*, TFree, Tpost, Tpre, Zprobe, Lighthome, lighton. 
+        - Config file is specific to each machine. and will require modification based on the wiring of your specific machine. Use our config file and our wire diagram as reference. 
+        - The TFree/Tpost/Tpre and ZProbe are all required files to add support for ATC and Automatic Tool offset probe. Copy these files and adress the position data as necessary. 
 
 
     &nbsp;
