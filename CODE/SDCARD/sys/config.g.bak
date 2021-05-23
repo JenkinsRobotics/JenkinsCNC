@@ -3,7 +3,7 @@ conf
 ; executed by the firmware on start-up
 ; Generated referencing RepRapFirmware Configuration Tool v3.1.8 and WorkBee Firmware Version 1.0.7
 
-;JenkinsCNC v0.5
+;JenkinsCNC v1.1
 
 
 
@@ -95,27 +95,22 @@ M568 P60 F24000                           ; set spindle RPM for tool 6)
 
 ; Other Settings
 M575 P1 S1 B57600                       ; enable support for PanelDue
-M140 H-1				; Disable heated bed
-M564 S1 H1 				; Disable jog commands when not homed
-M911 S21.0 R23 P"G91 G1 Z3 F1000" 	; Configure power loss resume
-M501					; Load Stored Parameters 
-
-M98 P"lighthome.g"		; set red light
-G28			          ; Home all Axis
-
-;T0                                          ; select tool 0
-
+M140 H-1								; Disable heated bed
+M564 S1 H1 								; Disable jog commands when not homed
+M911 S21.0 R23 P"G91 G1 Z3 F1000" 		; Configure power loss resume
+M501									; Load Stored Parameters 
+M98 P"lighthome.g"						; set red light
 ; initial setup
 M5                                      ; STOP SPINDLE
 M106 P0 S0                              ; turn off fan 0 (SPINDLE ENABLE) (RANGE : 0 to 255 or 0.0 to 1.0)
-M106 P1 S1.0                   			; turn off fan 1 (TOOL CHANGER) (RANGE : 0 to 255 or 0.0 to 1.0)  
+M106 P1 S1.0                   			; turn ON fan 1 (TOOL CHANGER) (RANGE : 0 to 255 or 0.0 to 1.0)  
 M106 P2 S0                              ; turn off fan 2 (Coolent) (RANGE : 0 to 255 or 0.0 to 1.0) 
 M106 P4 S0                              ; turn off fan 4 (RGB BLUE) (RANGE : 0 to 255 or 0.0 to 1.0) 
 M106 P5 S0                              ; turn off fan 5 (RGB GREEN)) (RANGE : 0 to 255 or 0.0 to 1.0) 
 M106 P6 S0                              ; turn off fan 6 (RGB RED)) (RANGE : 0 to 255 or 0.0 to 1.0) 
 M106 P7 S0                              ; turn off fan 7 (fan) (RANGE : 0 to 255 or 0.0 to 1.0) 
 M106 P8 S0                              ; turn off fan 8 (fan) (RANGE : 0 to 255 or 0.0 to 1.0) 
-
-M98 P"lighton.g"		; set WHITE light
+G28			          					; Home all Axis
+M98 P"lighton.g"						; set WHITE light
 
 

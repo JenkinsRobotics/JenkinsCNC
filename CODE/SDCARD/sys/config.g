@@ -105,9 +105,6 @@ M5                                      ; STOP SPINDLE
 M106 P0 S0                              ; turn off fan 0 (SPINDLE ENABLE) (RANGE : 0 to 255 or 0.0 to 1.0)
 M106 P1 S1.0                   			; turn ON fan 1 (TOOL CHANGER) (RANGE : 0 to 255 or 0.0 to 1.0)  
 M106 P2 S0                              ; turn off fan 2 (Coolent) (RANGE : 0 to 255 or 0.0 to 1.0) 
-M106 P4 S0                              ; turn off fan 4 (RGB BLUE) (RANGE : 0 to 255 or 0.0 to 1.0) 
-M106 P5 S0                              ; turn off fan 5 (RGB GREEN)) (RANGE : 0 to 255 or 0.0 to 1.0) 
-M106 P6 S0                              ; turn off fan 6 (RGB RED)) (RANGE : 0 to 255 or 0.0 to 1.0) 
 M106 P7 S0                              ; turn off fan 7 (fan) (RANGE : 0 to 255 or 0.0 to 1.0) 
 M106 P8 S0                              ; turn off fan 8 (fan) (RANGE : 0 to 255 or 0.0 to 1.0) 
 G28			          					; Home all Axis

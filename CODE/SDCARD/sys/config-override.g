@@ -1,9 +1,9 @@
-; config-override.g file generated in response to M500 at 2021-04-23 17:21
+; config-override.g file generated in response to M500
 ; This is a system-generated file - do not edit
 ; Heater model parameters
 ; Probed tool offsets
-G10 P1 X0.00 Y0.00 Z18.39
-G10 P2 X0.00 Y0.00 Z12.94
+G10 P1 X0.00 Y0.00 Z4.03
+G10 P2 X0.00 Y0.00 Z5.24
 G10 P3 X0.00 Y0.00 Z15.01
 G10 P4 X0.00 Y0.00 Z21.97
 G10 P5 X0.00 Y0.00 Z43.92
