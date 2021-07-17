@@ -341,7 +341,8 @@ function onSection() {
       mFormat.format(tool.clockwise ? 3 : 4), sOutput.format(spindleSpeed)//reversed to be correct order
     );
     if (properties.spindleDwellMethod) {
-      writeBlock(mFormat.format(577), "P" + properties.spindlePNumber);
+      writeBlock(mFormat.format(577), "P" + properties.spindlePNumber);  writeBlock(gFormat.format(4), "S1"); 
+
 
     } else {
       writeBlock(gFormat.format(4), "S" + properties.spindlePNumber);
