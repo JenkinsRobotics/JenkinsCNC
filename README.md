@@ -12,14 +12,19 @@
 - [x] Tool TCP Probe
 - [x] Work Piece XYZ Probe
 - [x] Custum Fusion 360 Post Processor
-- [ ] Pnumatic Dust Shoe
-- [ ] Upgraded Spindle Adaptor Plate
+- [x] Pnumatic Dust Shoe
 
 &nbsp;
 
 #### WATCH NOW ON YOUTUBE
 [![image alt text](http://img.youtube.com/vi/w-qWbZ5-IQw/0.jpg)](https://youtube.com/playlist?list=PLNTKXZ4hgP_jekZOWw05JcJtyseCdSsIV "YouTube")
+&nbsp;
 
+Did this project help you? Consider supporting! ►
+
+Consider Subscribing: https://bit.ly/2DgZyuq
+Patreon ➔ https://www.patreon.com/JenkinsRobotics
+Venmo ➔ https://venmo.com/u/JenkinsRobotics
 
 
 ___
@@ -54,11 +59,10 @@ The following is a breakdown of the different folders and the files contained in
     &nbsp;
 3. **DIAGRAMS**
    - *Jenkinc CNC Wire Diagram (JRCNCWD1)*
-    Check this to get an audible notifications whenever special attention required such as when the tool is ready for change, or where the extreme caution is advice, such as when failure to remove a probe can cause damages to the tool, part, machine or even the operator.
-    The audible signal is generated on the computer that runs the control and NOT the controller board. So, this requires your PC to be audio enabled and volume is up.
+    A wiring diagram is a simplified conventional pictorial representation of an electrical circuit. It shows the components of the circuit as simplified shapes, and the power and signal connections between the devices Reference the wire diagram to review how each electrical component is connected to the Duet board
 
    - *Duet 3 Reference files*
-    The Duet 3 mainboard is a powerful control board used for CNC and 3D printing applications. Most used board documentation files are copied into the folder. Duet3D online wiki contains many more useful information and [Documentations](https://duet3d.dozuki.com/ "Duet3D").
+    Reference files are used to highlight specific information that useful for the operation, installation of the duet board.  Duet3D online wiki contains many more useful information and [Documentations](https://duet3d.dozuki.com/ "Duet3D").
   
     &nbsp;
 4. **FUSION 360 POST PROCESSOR**
@@ -75,8 +79,10 @@ The following is a breakdown of the different folders and the files contained in
     &nbsp;
 5. **MANUALS**
    - *Reference Materials*
-    The manuals folder contains reference material used. Variable Frequency Drive Manual contains the custom settings. 
-
+    The manuals folder contains reference material for different hadware apart of the CNC. 
+      - The VFD Manual contains the custom settings specific for our spindle.
+      - Automatic Tool Changer (ATC) manual contains information required to "run-in" a new spindle to properly prepare it before running production
+      
 
 
 > Note: Updating the RepRap firmware should be done carefully. Uploading the updated ZIP file could erase custom gcode files. 
@@ -90,15 +96,19 @@ That’s  all Folks. Hope this can help you in some way.
 
 ---
 
+
+Disclaimer ►
+Modifying your Shapeoko  will void the warranty. Do at your own risk.
+
 SUPPORT US ► 
-- Consider Subscribing: https://bit.ly/2DgZyuq
-- Patreon ➔ https://www.patreon.com/JenkinsRobotics
+Consider Subscribing: https://bit.ly/2DgZyuq
+Patreon ➔ https://www.patreon.com/JenkinsRobotics
+Venmo ➔ https://venmo.com/u/JenkinsRobotics
 
 FOLLOW US ►
-- Discord ➔ https://discord.gg/sAnE5pRVyT
-- Twitter ➔ https://twitter.com/jenkinsrobotics
-- Instagram  ➔ https://www.instagram.com/jenkinsrobotics
-- Facebook ➔ https://www.facebook.com/jenkinsrobotics
-- GitHub  ➔ https://jenkinsrobotics.github.io
-
-
+Discord ➔ https://discord.gg/sAnE5pRVyT
+Patreon ➔ https://www.patreon.com/JenkinsRobotics
+Twitter ➔ https://twitter.com/jenkinsrobotics/ 
+Instagram  ➔ https://www.instagram.com/jenkinsrobotics/ 
+Facebook ➔ https://www.facebook.com/jenkinsrobotics/ 
+GitHub  ➔ https://jenkinsrobotics.github.io
