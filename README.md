@@ -22,9 +22,10 @@
 
 Did this project help you? Consider supporting! ►
 
-Consider Subscribing: https://bit.ly/2DgZyuq
-Patreon ➔ https://www.patreon.com/JenkinsRobotics
-Venmo ➔ https://venmo.com/u/JenkinsRobotics
+Consider Subscribing: https://bit.ly/2DgZyuq <br>
+Patreon ➔ https://www.patreon.com/JenkinsRobotics <br>
+Venmo ➔ https://venmo.com/u/JenkinsRobotics <br>
+
 
 
 ___
@@ -98,17 +99,22 @@ That’s  all Folks. Hope this can help you in some way.
 
 
 Disclaimer ►
+
 Modifying your Shapeoko  will void the warranty. Do at your own risk.
 
+
 SUPPORT US ► 
-Consider Subscribing: https://bit.ly/2DgZyuq
-Patreon ➔ https://www.patreon.com/JenkinsRobotics
-Venmo ➔ https://venmo.com/u/JenkinsRobotics
+
+Consider Subscribing: https://bit.ly/2DgZyuq <br>
+Patreon ➔ https://www.patreon.com/JenkinsRobotics  <br>
+Venmo ➔ https://venmo.com/u/JenkinsRobotics <br>
+
 
 FOLLOW US ►
-Discord ➔ https://discord.gg/sAnE5pRVyT
-Patreon ➔ https://www.patreon.com/JenkinsRobotics
-Twitter ➔ https://twitter.com/jenkinsrobotics/ 
-Instagram  ➔ https://www.instagram.com/jenkinsrobotics/ 
-Facebook ➔ https://www.facebook.com/jenkinsrobotics/ 
-GitHub  ➔ https://jenkinsrobotics.github.io
+
+Discord ➔ https://discord.gg/sAnE5pRVyT <br>
+Patreon ➔ https://www.patreon.com/JenkinsRobotics <br>
+Twitter ➔ https://twitter.com/j <br>
+Instagram  ➔ https://www.instagram.com/jenkinsrobotics/ <br>
+Facebook ➔ https://www.facebook.com/jenkinsrobotics/  <br>
+GitHub  ➔ https://jenkinsrobotics.github.io <br>
