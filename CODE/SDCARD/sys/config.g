@@ -51,7 +51,7 @@ M574 Z2 S1 P"!io3.in"                   ; configure active-high endstop for high
 
 ; Configure IO / Probes
 M558 K1 P8 C"!io4.in" H5 F100 T3000 	; XYZ Workpeice probe (bitzero) connected to io4 input
-M558 K2 P8 C"!io5.in" H5 F100 T3000 	; TOOL Z probe (bitsetter)  connected to io5 input
+M558 K2 P8 C"!io5.in" H5 F500 T3000 	; TOOL Z probe (bitsetter)  connected to io5 input
 G31 Z0 ; Set Z probe trigger height
 
 ; CNC INPUTS
@@ -60,6 +60,7 @@ M950 J2 C"!io8.in"                         ; create input pin 2 on pin io8.in (S
 
 ; CNC OUTPUTS SPINDLE
 M950 R0 C"out9+out0" L0:24000 			; Create spindle index 0, with PWM pin on OUT 9  and Supports range 0-2400 RPM
+
 
 ; CNC OUTPUTS
 M950 P1 C"out1"                         ; create io 1 on pin out1 (TOOL CHANGER) 

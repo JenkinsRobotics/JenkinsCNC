@@ -1,8 +1,12 @@
+conf
 ; Configuration file for Duet 3  FIRMWARE RepRapFirmware 3.3 and later
 ; executed by the firmware on start-up
 ; Generated referencing RepRapFirmware Configuration Tool v3.1.8 and WorkBee Firmware Version 1.0.7
 
-;JenkinsCNC v1.1
+;JenkinsCNC v1.2
+;Updated 7.13.21
+;Board: Duet 3
+;Firmware: Reprap Firmware 3.3 and later
 
 
 
@@ -47,15 +51,16 @@ M574 Z2 S1 P"!io3.in"                   ; configure active-high endstop for high
 
 ; Configure IO / Probes
 M558 K1 P8 C"!io4.in" H5 F100 T3000 	; XYZ Workpeice probe (bitzero) connected to io4 input
-M558 K2 P8 C"!io5.in" H5 F100 T3000 	; TOOL Z probe (bitsetter)  connected to io5 input
+M558 K2 P8 C"!io5.in" H5 F500:50 T3000 	; TOOL Z probe (bitsetter)  connected to io5 input
 G31 Z0 ; Set Z probe trigger height
 
 ; CNC INPUTS
 M950 J1 C"!io7.in"                         ; create input pin 1 on pin io7.in (Spindle on & At rpm) 
 M950 J2 C"!io8.in"                         ; create input pin 2 on pin io8.in (Spindle Stopped) 
 
-; CNC OUTPUTS RepRapFirmware 3.3beta2 and later
-M950 R0 C"out9+out0" L0:24000 			; Create spindle index 0, with PWM pin on heater 3 and 12000 RPM achieved at full PWM
+; CNC OUTPUTS SPINDLE
+M950 R0 C"out9+out0" L0:24000 			; Create spindle index 0, with PWM pin on OUT 9  and Supports range 0-2400 RPM
+
 
 ; CNC OUTPUTS
 M950 P1 C"out1"                         ; create io 1 on pin out1 (TOOL CHANGER) 
@@ -92,6 +97,7 @@ M564 S1 H1 								; Disable jog commands when not homed
 M911 S21.0 R23 P"G91 G1 Z3 F1000" 		; Configure power loss resume
 M501									; Load Stored Parameters 
 M98 P"lighthome.g"						; set red light
+
 ; initial setup
 M577 P2									; Wait Until the Input 2 is High (SPINDLE STOP FROM VFD)
 M5                                      ; STOP SPINDLE

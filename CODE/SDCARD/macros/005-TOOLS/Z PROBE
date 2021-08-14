@@ -24,10 +24,17 @@ G53 G1 X-700 Y-600 F4000							; Use machine coordinates Moved To Specified Perc
 G53 G1 X-550 Y-590 F3000     						; Use machine coordinates Move to Z Probe Location
 G53 G1 X-552 Y-732.5 F1500     						; Use machine coordinates Move to Z Probe Location
 G30 s-2 k2 X0 Y0 	               				; Probe in the Z direction and update tool z offset
-M500	                						; Save axis length to config-override.g
 
+;GCODE TO MOVE UP TOOL AND PERFORM A SECOND PROBE --- G30 s-1 does not support Double probing directly unlike G30 ( standard) When it does this section of code can be deleted
+G91                                             ;
+G1 Z3 F6000                                     ;raise z 3mm after probing
+G90                                             ;
+M203 X4500 Y4500 Z25
+G30 s-2 k2 X0 Y0 	               				; Probe in the Z direction and update tool z offset
+M203 X4500 Y4500 Z2500
 
 ; END
+M500	                						; Save axis length to config-override.g
 G53 G1 Z0 F1000 									; Raise Head
 G53 G1 X-550 Y-590 F3000     						; Use machine coordinates Move to Z Probe Location
 G53 G1 X-700 Y-600 F4000							; Use machine coordinates Moved To Specified Perch Location 
