@@ -144,7 +144,7 @@ function onOpen() {
   }
 
   sequenceNumber = properties.sequenceNumberStart;
-  writeln("%");
+  writeln(";Made With JenkinsCNCRepRap Post Processor%");
 
   if (programName) {
     writeComment(programName);
@@ -214,8 +214,10 @@ function onOpen() {
 
   switch (unit) {
   case IN:
-    writeBlock(gUnitModal.format(20));
-    break;
+    error(localize("Please select millimeters as unit when post processing. Inch mode is not recommended by the BoXZY team."));
+    return;
+    // writeBlock(gUnitModal.format(20));
+    // break;
   case MM:
     writeBlock(gUnitModal.format(21));
     break;
