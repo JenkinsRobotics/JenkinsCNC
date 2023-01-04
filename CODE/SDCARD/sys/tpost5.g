@@ -1,5 +1,6 @@
 ; tpost5.g
 ; called after tool 5 has been selected
-;
+; THIS CODE WILL RUN TOOL Z PROBE MACRO AFTER NEW TOOL HAVE BEEN SELECTED
+; Automatic TOOl Change 3/3
 
-M98 P"zprobe.g"		; UPDATE TCP AND TURN ON DUST COLLECTOR 
+M98 P"ToolZProbe.g"		; UPDATE TCP AND TURN ON DUST COLLECTOR 

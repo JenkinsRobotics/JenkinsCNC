@@ -1,0 +1,56 @@
+; DESCRIPTION: XYZ Probing macro for FRONT LEFT CORNER with a 1/4" Endmill
+; INSTRUCTIONS: start with the end mill 15mm ABOVE the xyz probe, about 15mm or less from the bottom left corner. Tested with Shapeoko xyz probe
+;
+; 
+; List of Variables
+; ENDMILL_DIAMETER = 3.175	;in millimeters
+; ENDMILL_DIAMETER = 1.5875	;in millimeters
+; PROBE_BLOCK_Z = 22	; Thickness of 3-axis probe in Z direction for Shapeoko XYZ PROBE
+; PROBE_BLOCK_Y = 7 	; Thickness of 3-axis probe in Y direction for Shapeoko XYZ PROBE
+; PROBE_BLOCK_X = 7	; Thickness of 3-axis probe in X direction for Shapeoko XYZ PROBE
+; G38.2 is used to probe for workpeice 
+
+
+; Setup
+G21												; make sure we’re in mm
+G91 											; Incremental mode
+M291 P"Make sure the probe is connected to bit and over xyz probe." R"Warning" S3   ; a warning message
+M42 P2 S0.0          							; turn OFF Output # 2 (Dust Collector) (RANGE : 0 to 255 or 0.0 to 1.0) 
+G53                       						; Switch to WCS #0
+
+
+;Probe Z
+G38.2 P1  Z-100 F75								; Probe Z downwards 
+G0 Z2											; lift 2mm
+G38.2 P1 Z-100 F45								; Probe Z downwards
+G4 P0.1 			
+G10 P1 L20  Z22									; Set Current Z  of WCS #1 as [Probe Block Z] thickness (22mm)
+
+; Probe X
+G0 Z3 											; lift Z 3mm
+G0 X-25											; Move left 25mm
+G0 Z-10											; Move down 10mm, should be 7mm below probe surface
+G38.2 P1  X0 F75								; Probe X to the right 
+G0 X-2											; Move left 2mm
+G38.2 P1  X0 F45								; Probe X to the right 
+G4 P0.1 										; A dwell time of half second to make sure the planner queue is empty
+G10 P1 L20  X-8.5875							; Set current X  of WCS #1 as [-ENDMILL_DIAMETER/2 -PROBE_BLOCK_X] (-8.5875mm)
+
+;Probe y
+G0 X-10											; Move left 10mm
+G0 Y-25											; Move forward 25mm
+G90 G0 X5										; Move to X5 (absolute) - will put you 5mm to the right of left edge of stock
+G91 											; incremental Mode
+G38.2 P1  Y0 F75								; Probe Y backwards
+G0 Y-2 											; Move forward 2mm
+G38.2 P1  Y0 F45								; Probe Y backwards
+G4 P0.1 										; A dwell time of half second to make sure the planner queue is empty
+G10 P1 L20  Y-8.5875							; Set current Y lof WCS #1 as [-ENDMILL_DIAMETER/2 -PROBE_BLOCK_Y] (-8.5875mm)
+
+; Move to work position
+G28 Z                  							; Home Z  
+G90												; Absolute mode
+G54                       						; Switch to WCS #1
+G1 X0 Y0 Z30 F1500            					; go to X=0, Y=0
+M42 P2 S1.0          							; turn ON Output # 2 (Dust Collector) (RANGE : 0 to 255 or 0.0 to 1.0) 
+M291 P"Probing complete on the WCS #1 . Please remove probe." R"Success" S1    ; screen message

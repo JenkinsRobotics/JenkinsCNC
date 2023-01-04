@@ -2,8 +2,16 @@
 # Jenkins CNC Project Files
 <!-- This is commented out. -->
 
+## Project Information
 
-#### WELCOME
+Project Status : <mark style="background-color: green"> &nbsp; COMPLETED &nbsp;</mark>  
+Code Status : <mark style="background-color: green"> &nbsp; GOOD &nbsp;</mark>  
+Development Status : <mark style="background-color: red"> &nbsp; NOT ACTIVE &nbsp;</mark>  
+
+
+&nbsp;
+## General Information
+---
 
  This is the project files for our Shapeoko 3 xxl. Our goal is to make our shapeoko 3 as automated as possible. To achive this goal we have installed multiple upgrades onto our cnc including: 
 - [x] Duet 3 Control Board
@@ -14,13 +22,21 @@
 - [x] Custum Fusion 360 Post Processor
 - [x] Pnumatic Dust Shoe
 
-&nbsp;
 
-#### WATCH NOW ON YOUTUBE
+&nbsp;
+## WATCH NOW ON YOUTUBE
+---
+
+ Watch the project playlist on youtube. 
+
+ &nbsp;
+
 [![image alt text](http://img.youtube.com/vi/w-qWbZ5-IQw/0.jpg)](https://youtube.com/playlist?list=PLNTKXZ4hgP_jekZOWw05JcJtyseCdSsIV "YouTube")
-&nbsp;
 
-Did this project help you? Consider supporting! ►
+&nbsp;
+## Support
+---
+Did this project help you? Consider supporting! 
 
 Consider Subscribing: https://bit.ly/2DgZyuq <br>
 Patreon ➔ https://www.patreon.com/JenkinsRobotics <br>
@@ -28,8 +44,21 @@ Venmo ➔ https://venmo.com/u/JenkinsRobotics <br>
 
 
 
-___
+&nbsp;
+## Table of Contents
+---
 
+**[Project File Structure](#project-file-structure)**<br>
+**[Installation Instructions](#installation-instructions)**<br>
+**[Next Steps](#next-steps)**<br>
+**[Components](#components)**<br>
+**[Notes and Miscellaneous](#notes-and-miscellaneous)**<br>
+**[Links](#links)**<br>
+
+
+&nbsp;
+## Project File Structure
+---
 The following is a breakdown of the different folders and the files contained in them:
 
 1. **CAD**
@@ -89,19 +118,87 @@ The following is a breakdown of the different folders and the files contained in
 > Note: Updating the RepRap firmware should be done carefully. Uploading the updated ZIP file could erase custom gcode files. 
 
 
+
+&nbsp;
+## Installation Instructions
+---
+Installation instructions can be found in the youtube video linked below 
+ 
+
+ ### Video link  be updated soon
+
+[![image alt text](http://img.youtube.com/vi/w-qWbZ5-IQw/0.jpg)](https://youtube.com/playlist?list=PLNTKXZ4hgP_jekZOWw05JcJtyseCdSsIV "YouTube")
+
+
+<!-- This is commented out.  
+
+The following is a breakdown of the different folders and the files contained in them:
+
+
+```
+cd utils
+node build.js
+```
+
+
+Create a file with a `.zip` extension containing these files and directories:
+
+```
+manifest.json
+common/
+chrome/
+```
+
+
+Create a file with a `.xpi` extension containing these files and directories:
+
+```
+chrome.manifest
+install.rdf
+common/
+firefox/
+```
+
+ This is commented out. -->
+
+
+&nbsp;
+## Next Steps
+---
+This project is now completed. No next steps are planned. We can release bug fixes if found. 
+
+If you require assistant join our discord channel linked down below.
+
+
+
+&nbsp;
+## Components 
+---
+The following is a breakdown of key components for this project:
+&nbsp;
+| Item          | Function      | Cost  | Link  |
+| ------------- |:-------------:| -----:|-----:|
+| Fusion 360    | CAD           | Free | Free |
+| VS Code       | Text Editor   |   Free | Free |
+| Spindle      | Spindle  |   $220 | (https://www.amazon.com/dp/B088824MPT/...) |
+| Tool Changer for Water or Air Cooled Spindle 0.8 or 1.5KW 65mm       | ATC   |   $400 | (https://cnccat.com/index.php?id=2&productid=1964&catid=0&subcatid=&lang=en) |
+
+
+&nbsp;
+## Notes and Miscellaneous
+---
+
+Disclaimer :
+Modifying your Shapeoko  will void the warranty. Do at your own risk.
+
 **ENJOY!!**
 
 That’s  all Folks. Hope this can help you in some way.
-
 ... Consider Supporting Us Down Below. 
 
+&nbsp;
+## Links
 ---
-
-
-Disclaimer ►
-
-Modifying your Shapeoko  will void the warranty. Do at your own risk.
-
 
 SUPPORT US ► 
 
@@ -118,3 +215,14 @@ Twitter ➔ https://twitter.com/j <br>
 Instagram  ➔ https://www.instagram.com/jenkinsrobotics/ <br>
 Facebook ➔ https://www.facebook.com/jenkinsrobotics/  <br>
 GitHub  ➔ https://jenkinsrobotics.github.io <br>
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,4 @@
+; Turn Off Spindle
+M5 											; STOP SPINDLE
+M577 P2										; Wait Until the Input 2 is High (SPINDLE STOP FROM VFD)
+M291 P"Spindle Stopped." R"Success" S1    ; screen message

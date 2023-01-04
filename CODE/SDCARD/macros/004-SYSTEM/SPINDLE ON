@@ -1,0 +1,6 @@
+; Spindle On
+M291 P"Make Sure Pnumatics Are On." R"Warning" S3    	; screen message
+M42 P1 S0.0           									; turn ON fan 1 (TOOL CHANGER) (RANGE : 0 to 255 or 0.0 to 1.0) 
+M3 S1000            									; SET SPINDLE SPEED TO 1000 RPM
+M577 P1													; Wait Until the Input 1 is High (SPINDLE ON @ RPM FROM VFD)
+M291 P"Spindle is On." R"Success" S1    				; screen message

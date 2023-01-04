@@ -51,7 +51,7 @@ M574 Z2 S1 P"!io3.in"                   ; configure active-high endstop for high
 
 ; Configure IO / Probes
 M558 K1 P8 C"!io4.in" H5 F100 T3000 	; XYZ Workpeice probe (bitzero) connected to io4 input
-M558 K2 P8 C"!io5.in" H5 F500:50 T3000 	; TOOL Z probe (bitsetter)  connected to io5 input
+M558 K2 P8 C"!io5.in" H5 F500 T3000 	; TOOL Z probe (bitsetter)  connected to io5 input
 G31 Z0 ; Set Z probe trigger height
 
 ; CNC INPUTS
@@ -102,7 +102,7 @@ M98 P"lighthome.g"						; set red light
 M577 P2									; Wait Until the Input 2 is High (SPINDLE STOP FROM VFD)
 M5                                      ; STOP SPINDLE
 ;M106 P0 S0                              ; turn off fan 0 (SPINDLE ENABLE) (RANGE : 0 to 255 or 0.0 to 1.0)
-M42 P1 S1.0                   			; turn ON fan 1 (TOOL CHANGER) (RANGE : 0 to 255 or 0.0 to 1.0)  
+M42 P1 S0                   			; turn ON fan 1 (TOOL CHANGER Locked) (RANGE : 0 to 255 or 0.0 to 1.0)  
 M42 P2 S0                              ; turn off fan 2 (Coolent) (RANGE : 0 to 255 or 0.0 to 1.0) 
 M106 P7 S0                              ; turn off fan 7 (fan) (RANGE : 0 to 255 or 0.0 to 1.0) 
 M106 P8 S0                              ; turn off fan 8 (fan) (RANGE : 0 to 255 or 0.0 to 1.0) 
